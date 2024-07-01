@@ -1,0 +1,293 @@
+:root {
+  --visa-blue: #1A1F71;
+  --visa-gold: #F7B600;
+  --visa-white: #FFFFFF;
+  --visa-light-blue: #3D4599;
+  --visa-light-gray: #F7F7F7;
+  --visa-dark-gray: #4D4D4D;
+}
+
+body {
+  background-color: var(--visa-light-gray);
+  color: var(--visa-dark-gray);
+  font-family: Arial, sans-serif;
+}
+
+.App {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.App-header {
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--visa-blue);
+}
+
+.App-header h1 {
+  color: var(--visa-blue);
+}
+
+.subtitle {
+  color: var(--visa-gold);
+}
+
+.auth-container {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: var(--visa-white);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.auth-form input,
+.auth-form button,
+.preferences-form input,
+.preferences-form select,
+.preferences-form button {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid var(--visa-light-blue);
+  border-radius: 4px;
+}
+
+.user-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: var(--visa-blue);
+  color: var(--visa-white);
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+.content-area {
+  background-color: var(--visa-white);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.preferences-section {
+  margin-bottom: 30px;
+}
+
+.meal-plans-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.meal-plan-card {
+  border: 1px solid var(--visa-light-blue);
+  padding: 20px;
+  border-radius: 8px;
+  background-color: var(--visa-white);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sustainability-score {
+  background-color: var(--visa-light-gray);
+  height: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.score-bar {
+  background-color: var(--visa-gold);
+  height: 100%;
+  transition: width 0.5s ease-in-out;
+}
+
+.btn {
+  cursor: pointer;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  color: var(--visa-white);
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--visa-blue);
+}
+
+.btn-secondary {
+  background-color: var(--visa-light-blue);
+}
+
+.btn-small {
+  padding: 5px 10px;
+  font-size: 0.9em;
+}
+
+.btn-danger {
+  background-color: #f44336;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn:disabled {
+  background-color: var(--visa-light-gray);
+  color: var(--visa-dark-gray);
+  cursor: not-allowed;
+}
+
+.loader {
+  text-align: center;
+  padding: 20px;
+  font-weight: bold;
+  color: var(--visa-blue);
+}
+
+.error-message {
+  background-color: #ffebee;
+  color: #b71c1c;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.success-message {
+  background-color: #e8f5e9;
+  color: #1b5e20;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.grocery-list-section,
+.sustainability-section {
+  margin-top: 30px;
+  background-color: var(--visa-white);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.grocery-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.grocery-list li {
+  padding: 5px 0;
+  border-bottom: 1px solid var(--visa-light-gray);
+}
+
+.sustainability-suggestions {
+  background-color: var(--visa-light-gray);
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+.sustainability-suggestions h4 {
+  color: var(--visa-blue);
+  margin-bottom: 10px;
+}
+
+.sustainability-suggestions ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sustainability-suggestions li {
+  margin-bottom: 5px;
+}
+
+/* New styles for charts */
+.nutrition-chart {
+  margin-top: 20px;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sustainability-chart-section {
+  margin-top: 40px;
+  background-color: var(--visa-white);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sustainability-chart-section h2 {
+  color: var(--visa-blue);
+  margin-bottom: 20px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .meal-plans-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .user-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .user-header button {
+    margin-top: 10px;
+  }
+
+  .nutrition-chart {
+    max-width: 100%;
+  }
+}
+
+/* Additional styles for better readability */
+.meal-plan-card h3 {
+  color: var(--visa-blue);
+  border-bottom: 2px solid var(--visa-gold);
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.meal-plan-card ul {
+  padding-left: 20px;
+}
+
+.meal-plan-card li {
+  margin-bottom: 10px;
+}
+
+.meal-plan-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.preferences-form label {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--visa-blue);
+  font-weight: bold;
+}
+
+.preferences-form select,
+.preferences-form input[type="number"] {
+  margin-bottom: 15px;
+}
+
+.sustainability-score {
+  position: relative;
+}
+
+.sustainability-score p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  color: var(--visa-dark-gray);
+  font-weight: bold;
+}
